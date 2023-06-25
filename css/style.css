@@ -338,7 +338,7 @@ text-align: center;
 transition: 0.3s ease;
 align-items: center;
 justify-items: center;
-
+border: 1px solid rgba(255, 255, 255, 0);
 }
 header .container  .right a i:hover {
     background-color:rgb(110, 110, 255) ;
