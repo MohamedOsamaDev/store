@@ -58,6 +58,12 @@ a {
     justify-content: space-between;
 
 }
+@media (max-width:575px) {
+    .title .container {
+        flex-direction: column;
+        align-items: center;
+    }
+}
 .title .container span {
     
     color: ghostwhite;
@@ -71,6 +77,7 @@ a {
  
     
 }
+
 .title .container ul li {
   color: ghostwhite;
   padding: 10px 15px 10px 15px;
@@ -78,8 +85,10 @@ a {
   border-left:1px solid ghostwhite  ;
   font-size: 11px;
 }
-.title .container ul li A {
+.title .container ul li a {
     color: ghostwhite;
+   display: flex;
+   text-align: center;
 }
 .layer-background {
     width: 100%; 
@@ -107,13 +116,20 @@ header .container {
    align-items: center;
     
 }
-@media (max-width: 992px) {
+@media (max-width:757px) {
     header .container {
+        gap:50px;
         justify-content: flex-start;
-       
     }
 }
-header .container .left {
+@media (max-width:757px) {
+    header .container {
+        gap:0px;
+        
+    }
+}
+
+header .left {
 display: flex;
 padding: 30px 10px 30px 10px;
 max-width: 100%;
@@ -121,14 +137,90 @@ position: relative;
 
 
 }
+
+
 header .container .left .toggle-butten {
-   position: absolute;
+    position: absolute;
    
    left: 136px;
    top: 31px;
-
+   
     font-size: 25px;
+    
 
+}
+header .container .left .toggle-butten:hover .icon span:nth-child(2) {
+    width: 100%;
+}
+header .container .left .toggle-butten .icon {
+    width: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+header .toggle-butten .icon span {
+background-color: #020202;
+height: 4px;
+margin-bottom: 5px;
+margin-left: 5px;
+
+}
+header .toggle-butten .icon span:first-child {
+width: 100%;
+
+}
+header .toggle-butten .icon span:nth-child(2) {
+    width: 55%;
+   transition: 0.3s ease;
+}
+
+header .toggle-butten .icon span:last-child {
+    width: 100%;
+    
+}
+header .toggle-butten  ul {
+position: absolute;
+background-color: rgba(255, 255, 255, 0.288);
+border-radius: 6px;
+
+margin-top: 10px;
+display: flex;
+left: -135px;
+right: 0;
+padding-bottom: 5px;
+width: fit-content;
+height: fit-content;
+align-content: center;
+
+
+}
+.hide {
+    display: none;
+    transition: 0.s ease;
+}
+header .container .left .toggle-butten:hover .hide {
+display: block;
+}
+header .toggle-butten  ul li a{
+    color: black;
+    font-size: 13px;
+    padding: 9px 5px;
+    border-left: 1px solid rgba(159, 156, 156, 0.525);
+    
+
+}
+header .toggle-butten  ul li .bor-none {
+    border: none;
+}
+
+header .toggle-butten  ul::before {
+content: "";
+border-width:10px ;
+border-style: solid;
+border-color: rgba(255, 0, 0, 0) rgba(0, 128, 0, 0) rgba(255, 255, 255, 0.516) rgba(0, 0, 255, 0) ;
+position: absolute;
+left: 142px;
+bottom: 34px
 }
 @media (min-width: 999px) {
     header .container .left .toggle-butten {
@@ -174,12 +266,7 @@ header .container .left .links {
 
  
 }
-@media (max-width: 768px) {
-    .layer-background header .container {
-      margin-left: 0px;
-    }
-   
-}
+
 
 header .container .left .links ul  {
     display: flex;
@@ -203,10 +290,30 @@ header .left .links ul li a:hover {
 header .container  .right {
     margin-left: 15px;
 }
-header .container  .right i {
-padding: 0 5px;
-}
+header .container  .right a i {
 
+color: black;
+padding: 10px;
+background-color: rgba(255, 255, 255, 0.326);
+border-radius: 50%;
+text-align: center;
+border: 1px solid rgb(110, 110, 255);
+transition: 0.3s ease;
+align-items: center;
+justify-items: center;
+
+}
+header .container  .right a i:hover {
+    background-color:rgb(110, 110, 255) ;
+    color:  white ;
+    border: 1px solid white;
+}
+@media (max-width: 357px) {
+    header .container  .right a i {
+        padding: 7px;
+        font-size: 12px;
+    }
+}
 .layer-background .landing {
    position: relative;
    top: 35%;
@@ -234,7 +341,7 @@ padding: 0 5px;
 
 .catogory {
     width: 100%;
-    margin-top: 100px;
+    margin-top: 60px;
     margin-bottom: 100px;
     
 }
@@ -251,12 +358,12 @@ padding: 0 5px;
    position: absolute;
    left: 29px;
    font-size: 25px;
-   top: 37px;
+   top: 25px;
 }
 .catogory .container .box p  {
     position: absolute;
     left: 29px;
-    top: 70px;
+    top: 61px;
     font-size: 13px;
     color: grey;
  }
@@ -320,6 +427,12 @@ font-size: 18px;
 }
 .products .filters .filter-left ul li a {
     color:rgba(128, 128, 128, 0.733) ;
+    padding-bottom: 5px;
+    transition: 0.5s ease;
+    border-bottom: 2px solid transparent;
+}
+.products .filters .filter-left ul li a:hover{
+    border-bottom: 2px solid rgba(128, 128, 128, 0.512);
 }
 @media (max-width:481px ){
     .products .filters .filter-left ul li {
@@ -398,13 +511,7 @@ margin: 20px 0px 0px 0px;
    
   
 }
-@media (max-width: 570px) {
-    .footer .container {
-        display: flex;
-       flex-wrap:wrap ;
-       flex-direction: column;
-        justify-content: center;
-}}
+
 .footer .container .box {
     margin-top: 50px;
     margin-right: 50px;
@@ -440,16 +547,17 @@ margin: 20px 0px 0px 0px;
     color: rgb(110, 110, 255);
 }
 .footer .box .email {
-    padding-right: 55px;
+    padding-right: 35px;
     padding-bottom: 5px;
     border-bottom: 1px solid rgba(128, 128, 128, 0.733);
     margin-bottom: 40px;
+    font-size: 14px;
 }
 .footer .box .email a {
     color:rgba(128, 128, 128, 0.733) ;
 }
 .footer .box .subscribe {
-    margin: 20px 30px;
+    margin: 20px -7px;
     padding: 15px 45px ;
 
 }
