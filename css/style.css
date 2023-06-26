@@ -224,7 +224,7 @@ header  .toggle-butten:hover .hide {
 }
 header .toggle-butten ul li {
     border-bottom: 1px solid rgba(159, 156, 156, 0.525);
-    padding: 3px 5px 3px 3px;
+    padding: 10px 10px;
     transition: 0.3s ease;   
 }
 .toggle-butten ul li:last-child {
