@@ -50,7 +50,7 @@ a {
     }
 }
 .title {
-    width: 100%;
+    width:100% ;/*100%*/
     background-color: rgb(44, 43, 43);
 }
 .title .container {
@@ -92,7 +92,7 @@ a {
    text-align: center;
 }
 .layer-background {
-    width: 100%; 
+    width: 100%;/*100%*/ 
     height: 80vh;
    position: relative;
    background-image: url(../media/num\ \(11\).jpg);
@@ -115,6 +115,7 @@ header .container {
    display: flex;
    justify-content: space-between;
    align-items: center;
+   
     
 }
 @media (max-width:757px) {
@@ -130,24 +131,37 @@ header .container {
     }
 }
 
+
 header .left {
 display: flex;
-padding: 30px 10px 30px 10px;
+padding: 15px 10px 15px 10px;
 max-width: 100%;
 position: relative;
 
 
 }
+@media (max-width:999px) {
+    header .left  {
+        display: flex;
+        justify-content: space-between;
+        width: 280px;
+    }
+}
+@media (max-width:768px) {
+    header .container {
+        margin-left: 0px;
+    }
+}
 
 
 header .container .left .toggle-butten {
-    position: absolute;
-   
-   left: 136px;
-   top: 31px;
-   
+    padding: 5px;
+    width: 60px;
+    height: 50px;
     font-size: 25px;
-    
+    align-items: center;
+    display: flex;
+    justify-content: center;
 
 }
 header .container .left .toggle-butten:hover .icon span:nth-child(2) {
@@ -184,35 +198,25 @@ header .toggle-butten  ul {
     border-radius: 6px;
     margin-top: 10px;
     display: flex;
-    right: 0;
+    right: 183px;
     padding-bottom: 5px;
     width: fit-content;
     height: fit-content;
     align-content: center;
-    /*background-color: rgba(255, 255, 255, 0.288);
-    left: -135px;
-    
-    */
-    /**/
     z-index: 100;
     background-color: rgb(255, 255, 255);
     flex-direction: column;
-    
-    top: 20px;
-   width: 80px;
+    top: 54px;
+    width: 80px;
 }
 header .toggle-butten  ul::before {
-content: "";
-border-width:18px ;
-border-style: solid;
-border-color: rgba(255, 0, 0, 0) rgba(0, 128, 0, 0) rgba(255, 255, 255, 0) rgba(0, 0, 255, 0) ;
-position: absolute;
-/*
-left: 142px;
-bottom: 34px
-*/
-left: 60px;
-top: -16px;
+    content: "";
+    border-width: 17px;
+    border-style: solid;
+    border-color: rgba(255, 0, 0, 0) rgba(0, 128, 0, 0) rgb(255 255 255) rgba(0, 0, 255, 0);
+    position: absolute;
+    left: 0px;
+    top: -29px;
 
 }
 .hide {
@@ -224,7 +228,7 @@ header  .toggle-butten:hover .hide {
 }
 header .toggle-butten ul li {
     border-bottom: 1px solid rgba(159, 156, 156, 0.525);
-    padding: 10px 10px;
+    padding: 3px 5px 3px 3px;
     transition: 0.3s ease;   
 }
 .toggle-butten ul li:last-child {
@@ -246,11 +250,9 @@ header .toggle-butten  ul li a{
     font-size: 13px;
     width: 100%;
     
-    /*
-    border-left: 1px solid rgba(159, 156, 156, 0.525);
-    */
+ 
     
-}/*
+}
 header .toggle-butten  ul li a:hover {
 color:rgb(110, 110, 255) ;
 
@@ -258,7 +260,7 @@ color:rgb(110, 110, 255) ;
 header .toggle-butten  ul li .bor-none {
     border: none;
 }
-*/
+
 
 @media (min-width: 999px) {
     header .container .left .toggle-butten {
@@ -273,7 +275,7 @@ header .container .left .toggle-butten i{
 
 
 header .container .left .logo {
-    margin: 0px 20px 0px 0px;
+    margin: 10px 10px 0px 0px;
     width: 150px;
 
 
@@ -284,6 +286,7 @@ header .container .left .links {
     display: flex;
    padding: 0px 20px 0px 70px;
 }
+
 @media (max-width: 1200px) {
     .layer-background .container .left {
         padding-left: 0px;
@@ -320,13 +323,23 @@ padding-bottom: 10px;
 transition: 0.3s ease ;
 border-bottom: 4px solid transparent;
 }
-header .left .links ul li a:hover {
+header .left .links ul li a:hover  {
     color:rgb(110, 110, 255) ;
     padding-bottom:10px ;
-    border-bottom: 4px solid rgb(110, 110, 255);
+    
+}
+.activeplus {
+    color:rgb(110, 110, 255)  !important ;
+    border-bottom: 4px solid rgb(110, 110, 255) !important;
+
 }
 header .container  .right {
     margin-left: 15px;
+}
+@media (max-width:768px) {
+    header .container  .right {
+        display: none;
+    }
 }
 header .container  .right a i {
 
@@ -360,7 +373,7 @@ header .container  .right a i:hover {
  
 
 .layer-background .landing .butten {
-    display:block;
+    display:block;/*block*/
     padding: 15px 45px;
     width: fit-content;
     border-radius: 46px;
@@ -378,6 +391,7 @@ header .container  .right a i:hover {
 
 .catogory {
     width: 100%;
+    
     margin-top: 60px;
     margin-bottom: 100px;
     
@@ -390,9 +404,10 @@ header .container  .right a i:hover {
 }
 .catogory .container .box {
     position: relative;
+    
 }
 .catogory .container .box h2  {
-   position: absolute;
+   position:absolute ;/*absoute*/
    left: 29px;
    font-size: 25px;
    top: 25px;
@@ -405,11 +420,11 @@ header .container  .right a i:hover {
     color: grey;
  }
 .catogory .container .box img {
-    width: 300px;
+    width: 300px;/*300*/
     border: px solid rgba(128, 128, 128, 0.219);
 }
 
-/* start fliters*/
+
 
 .products {
 width: 100%;
