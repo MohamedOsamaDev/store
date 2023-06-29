@@ -406,20 +406,21 @@ header .container  .right a i:hover {
     position: relative;
     
 }
-.catogory .container .box h2  {
+.catogory  li a .box   h2  {
    position:absolute ;/*absoute*/
    left: 29px;
    font-size: 25px;
    top: 25px;
+   color: black;
 }
-.catogory .container .box p  {
+.catogory .container li .box  p  {
     position: absolute;
     left: 29px;
     top: 61px;
     font-size: 13px;
     color: grey;
  }
-.catogory .container .box img {
+.catogory .container a .box  img {
     width: 300px;/*300*/
     border: px solid rgba(128, 128, 128, 0.219);
 }
